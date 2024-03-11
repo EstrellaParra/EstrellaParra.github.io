@@ -563,15 +563,22 @@ h3.my-profession {
   margin-bottom: 60px;
 }
 .contact .contact-info-item {
-  flex: 0 0 25%;
-  max-width: 25%;
+  flex: 0 0 30%;
+  max-width: 30%;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .contact .contact-info-item .icon {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 }
-.contact .contact-info-item .icon .fa {
+.contact .contact-info-item .icon .fa,
+.contact .contact-info-item .icon .fab {
   font-size: 25px;
   color: var(--skin-color);
 }
