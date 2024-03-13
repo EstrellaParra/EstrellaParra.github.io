@@ -377,8 +377,7 @@ h3.my-profession {
   margin-top: 10px;
 }
 .about .about-content .skills {
-  flex: 0 0 40%;
-  max-width: 40%;
+  display: flex;
   margin-top: 40px;
   font-weight: 700;
   padding: 10px 0;
@@ -540,10 +539,42 @@ h3.my-profession {
   margin-bottom: 30px;
 }
 .portfolio .portfolio-item-inner {
+  position: relative;
   border: 6px solid var(--bg-black-100);
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
+}
+.portfolio .portfolio-item-inner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.3s ease; /* Transición suave */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio .portfolio-item-inner:hover .overlay {
+  opacity: 1; /* Mostrar al pasar el ratón */
+}
+
+.portfolio .portfolio-item-inner .overlay-content {
+  text-align: center;
+}
+
+.portfolio .portfolio-item-inner .overlay-content a {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.portfolio .portfolio-item-inner .overlay-content a:hover {
+  text-decoration: underline;
 }
 .portfolio .portfolio-item-inner .portfolio-img img {
   width: 100%;
@@ -579,7 +610,7 @@ h3.my-profession {
 }
 .contact .contact-info-item .icon .fa,
 .contact .contact-info-item .icon .fab {
-  font-size: 25px;
+  font-size: 40px;
   color: var(--skin-color);
 }
 .contact .contact-info-item h4 {
