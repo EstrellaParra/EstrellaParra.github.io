@@ -579,8 +579,16 @@ h3.my-profession {
 .portfolio .portfolio-item-inner .overlay-content a:hover {
   text-decoration: underline;
 }
+
+.portfolio .portfolio-item-inner .portfolio-img {
+  height: 200px;
+  overflow: hidden;
+}
+
 .portfolio .portfolio-item-inner .portfolio-img img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
